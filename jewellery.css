@@ -1,53 +1,261 @@
 
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fffaf7;
+    color: #29201d;
+}
+
+
+/* HEADER */
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #eee0d8;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #a6784f;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b27b50;
+}
+
+.icons {
+    font-size: 20px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    background: #f8eee8;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.small-title {
+    color: #b17a51;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    font-family: Georgia, serif;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #b27b50;
+    font-style: italic;
+}
+
+.description {
+    width: 80%;
+    line-height: 1.7;
+    color: #6c625e;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.shop-btn {
+    background: #a8754d;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 3px;
+}
+
+.shop-btn:hover {
+    background: #805638;
+}
+
+.explore-btn {
+    text-decoration: none;
+    color: #634c3d;
+}
+
+.hero-image {
+    width: 43%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+/* CATEGORIES */
+
+.categories {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.categories h2,
+.products h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.category {
+    width: 30%;
+    background: white;
+    padding-bottom: 20px;
+}
+
+.category img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.category h3 {
+    margin: 15px 0 10px;
+    font-family: Georgia, serif;
+}
+
+.category a {
+    color: #a8754d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    padding: 70px 8%;
+    background: #f8eee8;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product {
+    width: 30%;
+    background: white;
+    padding-bottom: 25px;
+}
+
+.product img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin-top: 18px;
+    font-family: Georgia, serif;
+}
+
+.product p {
+    margin: 10px;
+    color: #a8754d;
+    font-weight: bold;
+}
+
+.product button {
+    border: none;
+    background: #29201d;
+    color: white;
+    padding: 11px 25px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background: #a8754d;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
     }
 
-    body {
-      font-family: Arial, sans-serif;
+    .hero {
+        flex-direction: column;
+        gap: 40px;
     }
 
-    header {
-      background-color: #fff8f0;
-      padding: 18px 8%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #e5d5c5;
+    .hero-text,
+    .hero-image {
+        width: 100%;
     }
 
-    .logo {
-      font-family: Georgia, serif;
-      font-size: 28px;
-      color: #9b6b43;
-      font-weight: bold;
+    .hero h1 {
+        font-size: 42px;
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
+    .category-container,
+    .product-container {
+        flex-direction: column;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
+    .category,
+    .product {
+        width: 100%;
     }
-
-    nav a:hover {
-      color: #b8860b;
-    }
-
-    .icons {
-      display: flex;
-      gap: 18px;
-      font-size: 20px;
-    }
-
-    .icons a {
-      text-decoration: none;
-      color: #333;
-    }
+}
